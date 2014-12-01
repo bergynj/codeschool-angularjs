@@ -3,7 +3,7 @@
 /* jasmine specs for filters go here */
 
 describe('filter', function() {
-  beforeEach(module('gemStore.filters'));
+  beforeEach(module('myApp.filters'));
 
 
   describe('interpolate', function() {

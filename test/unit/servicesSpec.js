@@ -3,7 +3,7 @@
 /* jasmine specs for services go here */
 
 describe('service', function() {
-  beforeEach(module('gemStore.services'));
+  beforeEach(module('myApp.services'));
 
 
   describe('version', function() {
