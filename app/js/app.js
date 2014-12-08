@@ -2,15 +2,13 @@
     'use strict';
 
     /**
-    * @namespace app
+    * @ngdoc overview
+    * @name gemStore
+    * @type module
+    * 
+    * @description
+    * Declare app level module which depends on filters, and services
     */
-    
-    /**
-    * @class app.gemStore
-    * @memberOf gemStore    
-    */
-
-    // Declare app level module which depends on filters, and services
     angular.module('gemStore', [
       'ngRoute',
       'gemStore.filters',
@@ -18,11 +16,15 @@
       'gemStore.directives',
       'gemStore.controllers'
     ])
-    
+
     /**
-     * Represents the app configuration.
-     * @config
-     */
+    * @ngdoc object
+    * @name gemStore.config
+    * @type {Object}
+    * 
+    * @description
+    * App configuration with view routes
+    */
     .config(['$routeProvider', function($routeProvider) {
       $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
       $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});

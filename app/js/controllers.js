@@ -2,13 +2,23 @@
 (function() {
     'use strict';
 
-    /* Controllers */
-
+    /**
+    * @ngdoc overview
+    * @name gemStore.controllers
+    * @type module
+    * 
+    * @description
+    * Inititate gemStore controllers
+    */
     angular.module('gemStore.controllers', [])
 
     /**
-    * Gallery controller
-    * @controller
+    * @ngdoc object
+    * @name gemStore.controllers.GalleryController
+    * @type {object}
+    * 
+    * @description
+    * Set to current gallery
     */
     .controller('GalleryController', function(){
         this.current = 0;
@@ -17,6 +27,14 @@
         };
     })
 
+    /**
+    * @ngdoc object
+    * @name gemStore.controllers.TabController
+    * @type {object}
+    * 
+    * @description
+    * Tab controls to switch between tabs
+    */
     .controller('TabController', function(){
         this.tab = 1;
         this.setTab = function(tab){
@@ -26,7 +44,14 @@
             return (this.tab === tab);
         };
     })
-    
+
+    /**
+    * @ngdoc object
+    * @name gemStore.controllers.StoreController
+    * 
+    * @description
+    * Store gem values
+    */
     .controller('StoreController', function() {
         var gems = [{
           name: 'Azurite',
@@ -109,11 +134,27 @@
 
         this.products = gems;
     })
-    
+
+    /**
+    * @ngdoc object
+    * @name gemStore.controllers.MyCtrl1
+    * @type {object}
+    * 
+    * @description
+    * View controller with scope 1
+    */
     .controller('MyCtrl1', ['$scope', function($scope) {
 
     }])
     
+    /**
+    * @ngdoc object
+    * @name gemStore.controllers.MyCtrl2
+    * @type {object}
+    * 
+    * @description
+    * View controller with scope 2
+    */
     .controller('MyCtrl2', ['$scope', function($scope) {
 
     }]);
