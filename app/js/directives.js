@@ -1,51 +1,29 @@
-'use strict';
+(function() {
+    'use strict';
 
-/* Directives */
+    /**
+    * @ngdoc overview
+    * @name gemStore.directives
+    * @type module
+    *
+    * @description
+    * Inititate app directives
+    */
+    angular.module('gemStore.directives', [])
 
-
-angular.module('gemStore.directives', [])
-
-	.directive('appVersion', ['version', function(version) {
-		return function(scope, elm, attrs) {
-			elm.text(version);
-		};
-	}])
-	
-	.directive('productTitle', function(){
-		return{
-			restrict: 'E',
-			templateUrl: 'partials/product-title.html'
-		};
-	})
-	
-	.directive('productDescription', function(){
-		return{
-			restrict: 'E',
-			templateUrl: 'partials/product-description.html'
-		};
-	})
-	
-	.directive('productRatings', function(){
-		return{
-			restrict: 'E',
-			templateUrl: 'partials/product-ratings.html'
-		};
-	})
-	
-	.directive('productSpecifications', function(){
-		return{
-			restrict: 'E',
-			templateUrl: 'partials/product-specifications.html',
-			controller: 'ReviewController',
-			controllerAs: 'reviewCtrl'
-		};
-	})
-	
-	.directive('productGallery', function(){
-		return{
-			restrict: 'E',
-			templateUrl: 'partials/product-gallery.html',
-			controller: 'GalleryController',
-			controllerAs: 'gallery'
-		};
-	});
+    /**
+    * @ngdoc object
+    * @name gemStore.directive.appVersion
+    * @type {object}
+    * @param
+    * @return {string}
+    *
+    * @description
+    * Return app version
+    */
+    .directive('appVersion', ['version', function(version) {
+        return function(scope, elm, attrs) {
+          elm.text(version);
+        };
+    }]);
+})();

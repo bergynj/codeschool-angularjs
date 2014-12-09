@@ -6,6 +6,7 @@
 .ng-valid.ng-dirty {
   border-color:green;
 }
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;

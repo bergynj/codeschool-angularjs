@@ -1,6 +1,6 @@
-# Gem Store - A playground for CodeSchool AngularJS course
+# Gem Store 
 
-This project is an application replicating the Gem Store AngularJS application from [Code School][1].
+This is a sample project for CodeSchool - Shaping Up with Angular.js
 
 
 ## Getting Started
@@ -14,15 +14,6 @@ You need git to clone the angularjs-codeschool repository. You can get it from
 
 We also use a number of node.js tools to initialize and test angularjs-codeschool. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
-
-### Clone angularjs-codeschool
-
-Clone the angular-seed repository using [git][git]:
-
-```
-git clone https://github.com/mleonelli/angularjs-codeschool.git
-cd angularjs-codeschool
-```
 
 ### Run the application
 The application is based over angular-seed template project. Follow instruction on [angular-seed page][2] to run and test application.
