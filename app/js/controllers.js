@@ -65,7 +65,9 @@
     /**
     * @ngdoc object
     * @name gemStore.controllers.StoreController
-    * 
+    * @param   
+    * @return {object}
+    *
     * @description
     * Store gem values
     */
@@ -150,8 +152,11 @@
         }];
 
         this.products = gems;
+
     })
 
+
+            
     /**
     * @ngdoc object
     * @name gemStore.controllers.MyCtrl1
