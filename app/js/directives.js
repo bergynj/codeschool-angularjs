@@ -102,6 +102,25 @@
     
     /**
     * @ngdoc object
+    * @name gemStore.directive.productTabs
+    * @type {object}
+    * 
+    * @return 
+    *
+    * @description
+    * Return app version
+    */
+	.directive('productTabs', function(){
+		return{
+			restrict: 'E',
+			templateUrl: 'partials/product-tabs.html',
+			controller: 'TabController',
+			controllerAs: 'tab'
+		};
+	})
+    
+    /**
+    * @ngdoc object
     * @name gemStore.directive.appVersion
     * @type {object}
     * @param

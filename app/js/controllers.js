@@ -42,7 +42,7 @@
         this.setCurrent = function(current){
           this.current = current || 0;
         };
-    })
+    })    
 
     /**
     * @ngdoc object
