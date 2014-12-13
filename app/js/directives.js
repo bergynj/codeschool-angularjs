@@ -13,6 +13,114 @@
 
     /**
     * @ngdoc object
+    * @name gemStore.directive.productTitle
+    * @type {object}
+    *
+    * @return
+    *
+    * @description
+    * Return app version
+    */
+	.directive('productTitle', function(){
+		return{
+			restrict: 'E',
+			templateUrl: 'partials/product-title.html'
+		};
+	})
+
+    /**
+    * @ngdoc object
+    * @name gemStore.directive.productDescription
+    * @type {object}
+    *
+    * @return
+    *
+    * @description
+    * Return app version
+    */	
+	.directive('productDescription', function(){
+		return{
+			restrict: 'E',
+			templateUrl: 'partials/product-description.html'
+		};
+	})
+	
+    /**
+    * @ngdoc object
+    * @name gemStore.directive.productRatings
+    * @type {object}
+    *
+    * @return
+    *
+    * @description
+    * Return app version
+    */
+	.directive('productRatings', function(){
+		return{
+			restrict: 'E',
+			templateUrl: 'partials/product-review.html'
+		};
+	})
+    
+    /**
+    * @ngdoc object
+    * @name gemStore.directive.productSpecifications
+    * @type {object}
+    * 
+    * @return
+    *
+    * @description
+    * Return app version
+    */
+	.directive('productSpecifications', function(){
+		return{
+			restrict: 'E',
+			templateUrl: 'partials/product-specs.html',
+			controller: 'ReviewController',
+			controllerAs: 'reviewCtrl'
+		};
+	})
+
+    /**
+    * @ngdoc object
+    * @name gemStore.directive.productGallery
+    * @type {object}
+    * 
+    * @return 
+    *
+    * @description
+    * Return app version
+    */
+	.directive('productGallery', function(){
+		return{
+			restrict: 'E',
+			templateUrl: 'partials/product-gallery.html',
+			controller: 'GalleryController',
+			controllerAs: 'gallery'
+		};
+	})
+    
+    /**
+    * @ngdoc object
+    * @name gemStore.directive.productTabs
+    * @type {object}
+    * 
+    * @return 
+    *
+    * @description
+    * Return app version
+    */
+	.directive('productTabs', function(){
+		return{
+			restrict: 'E',
+			templateUrl: 'partials/product-tabs.html',
+			controller: 'TabController',
+			controllerAs: 'tab'
+		};
+	})
+    
+    /**
+    * @ngdoc object
     * @name gemStore.directive.appVersion
     * @type {object}
     * @param
