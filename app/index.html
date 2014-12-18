@@ -19,8 +19,14 @@
     <link rel="stylesheet" href="css/app.css" />
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-
-<body class="container" ng-controller="StoreController as store">
+    
+<!--
+  * Refer to /app/js/controller.js to see controller used to load products 
+  StoreController : old function, create gems using static object def
+  StoreControllerService : load gems from /app/products.json using $http service (promises)
+  Note : JSON has to be properly formatted or app will crash! (static gems def and externally loaded JSON has slightly different format) 
+-->
+<body class="container" ng-controller="StoreControllerService as store">
 
     <!--  Products Container  -->
     <div class="list-group">

@@ -61,7 +61,7 @@
             return (this.tab === tab);
         };
     })
-
+        
     /**
     * @ngdoc object
     * @name gemStore.controllers.StoreController
@@ -69,7 +69,8 @@
     * @return {object}
     *
     * @description
-    * Store gem values
+    * Gem values stored statically 
+    * Note : gems stored as object, different formatting to JSON obj stored externally. 
     */
     .controller('StoreController', function() {
         var gems = [{
@@ -152,10 +153,28 @@
         }];
 
         this.products = gems;
-
     })
 
-
+    /**
+    * @ngdoc object
+    * @name gemStore.controllers.StoreControllerService
+    * @param   
+    * @return {object}
+    *
+    * @description
+    * Load gems dynamically with $http service from /app/products.json
+    * $http service & dependency injection
+    * Note : External JSON file has to be valid & properly formatted 
+    */
+    .controller('StoreControllerService', ['$http', function($http) {
+        var store = this;   // create an alias for this, to be used inside $http get
+        store.products = [];    // init store data
+        
+        $http.get('/app/products.json').success(function(data) {
+            // 'this' in here refer to $http service object, must use store alias
+            store.products = data;
+        });
+    }] )
             
     /**
     * @ngdoc object
